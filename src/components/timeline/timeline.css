@@ -1,0 +1,17 @@
+.vertical-timeline::before {
+  background: #88C0D0;
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  margin-left: 60px;
+  background: #fff;
+  border-radius: .5em;
+  padding: 1em;
+  box-shadow: rgba(184, 194, 215, 0.35) 0px 3px 6px 0px;
+  transition: box-shadow 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
+}
+
+.vertical-timeline-element-subtitle {
+  display: flex;
+}
