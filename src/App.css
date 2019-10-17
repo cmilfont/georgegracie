@@ -1,21 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+}
+
 .App {
   background-color: #F8F9FB;
-}
-
-a {
-  color: #5E81AC;
-}
-
-.App-header {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: 000;
-}
-
-.App-link {
-  color: #09d3ac;
+  margin-top: 56px;
 }

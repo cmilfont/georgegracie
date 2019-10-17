@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import {  useSelector } from 'react-redux';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
@@ -10,6 +11,7 @@ const useStyles = makeStyles(() => ({
   root: {
     //backgroundColor: '#FFF',
     position: 'relative',
+    marginTop: '56px'
   },
   img: {
     maxWidth: 350,
@@ -17,17 +19,18 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default () => {
+export default withRouter(() => {
 
   const schedule = useSelector(state => state.fights);
   const classes = useStyles();
 
   return (
-    <div id="agenda" className={classes.root}>
+    <div className={classes.root}>
       <VerticalTimeline layout="2-columns">
         {
           schedule.map(event => (
             <VerticalTimelineElement
+            key={`${event.title.replace(/\s/g, '-')}-${event.date.replace(/\s/g, '-')}`}
               className="vertical-timeline-element--work"
               date={event.date}
               iconStyle={{ background: '#88C0D0', color: '#fff' }}
@@ -49,12 +52,4 @@ export default () => {
       </VerticalTimeline>
     </div>
   );
-}
-
-
-
-
-
-
-
-
+});
