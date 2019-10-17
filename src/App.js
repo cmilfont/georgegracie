@@ -13,7 +13,7 @@ import { Route, Switch } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
 import Theme from './components/theme';
 import Timeline from './components/timeline';
-import Header from './components/header';
+import Home from './components/home';
 import Toolbar from './components/toolbar';
 import './App.css';
 
@@ -53,7 +53,7 @@ function App() {
             <div className="App">
 
             <Switch>
-              <Route exact path="/" render={Header} />
+              <Route exact path="/" render={Home} />
               <Route exact path="/lutador" render={Timeline} />
               <Route render={() => (<div>Miss</div>)} />
             </Switch>

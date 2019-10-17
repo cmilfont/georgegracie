@@ -14,19 +14,4 @@
   align-content: center;
 }
 
-.App-header .video {
-  
-}
 
-.App-header .channel {
-  color: #2E3440;
-}
-
-.App-header .channel .calling .ola {
-  color:#BF616A;
-}
-
-.App-header .channel .name {
-  font-size: larger;
-  font-weight: bold;
-}
