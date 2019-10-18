@@ -33,8 +33,7 @@ export default withRouter(() => {
           <div className="name">GEORGE GRACIE</div>
         </div>
         <div className="video-container" className={classes.video}>
-          <iframe className={classes.video} width="853" height="480" src="https://www.youtube.com/embed/7CXogg8IyU4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          
+          <iframe className={classes.video} width="853" height="480" src="https://www.youtube.com/embed/z4KvnFtZkoQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </Typography>
     </Container>
