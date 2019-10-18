@@ -16,6 +16,10 @@ export default history => {
       }
     }
 
+    if (action.meta && action.meta.reducer) {
+      return action.meta.reducer(state, action);
+    }
+
     return state;
   }
 }

@@ -6,8 +6,6 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
-
-//import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,9 +13,12 @@ import Theme from './components/theme';
 import Timeline from './components/timeline';
 import Home from './components/home';
 import Toolbar from './components/toolbar';
+import Login from './components/login';
 import './App.css';
 
 import createReducer from './api/reducer';
+import sagas from './api/sagas';
+import firebase from './api/firebase';
 
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();
@@ -31,10 +32,8 @@ const composed = composeEnhancers(applyMiddleware(...middlewares));
 
 const reducer = createReducer(history);
 
-const store = createStore(
-  reducer, 
-  composed);
-//sagaMiddleware.run(sagas, firebase, graphqlClient);
+const store = createStore(reducer, composed);
+sagaMiddleware.run(sagas, firebase);
 
 const useStyles = makeStyles({
   root: {
@@ -55,6 +54,7 @@ function App() {
             <Switch>
               <Route exact path="/" render={Home} />
               <Route exact path="/lutador" render={Timeline} />
+              <Route exact path="/login" render={Login} />
               <Route render={() => (<div>Miss</div>)} />
             </Switch>
               

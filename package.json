@@ -43,5 +43,6 @@
   },
   "devDependencies": {
     "firebase-admin": "^8.6.1"
-  }
+  },
+  "type": "module"
 }

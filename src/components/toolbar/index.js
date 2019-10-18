@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#fff',
   },
   button: {
-    margin: theme.spacing(0.5),
+    margin: theme.spacing(1),
   },
   title: {
     
@@ -44,15 +44,11 @@ export default function ButtonAppBar() {
     <AppBar className={classes.appBar} position="fixed">
       <Toolbar>
         <Link1 className={classes.link} to="/">
-          <Avatar alt="Remy Sharp" src="images/icons/icon-72x72.png" />
+          <Avatar alt="George Gracie Logo" src="images/icons/icon-72x72.png" />
         </Link1>
         <Button size="small" className={classes.button} color="inherit" component={Link1} to="/lutador">Lutador</Button>
         <Button size="small" className={classes.button} color="inherit" component={Link1} disabled to="/mestre">
-          <Badge 
-            anchorOrigin={{
-              horizontal: 'left',
-              vertical: 'top',
-            }}
+          <Badge
             badgeContent={
               <span className={classes.breve}>
                 Breve
@@ -64,6 +60,7 @@ export default function ButtonAppBar() {
             Mestre
           </Badge>
         </Button>
+        <Button color="primary" variant="contained" component={Link1} to="/login">Login</Button>
       </Toolbar>
     </AppBar>
   );

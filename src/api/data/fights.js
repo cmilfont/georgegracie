@@ -109,9 +109,10 @@ const fights = [
   { title: 'h$',"date":"13 de dezembro de 1952","desc":"Derrota para Pedro Hemetério por desistência (segundo os Gracie e Pedro foi estrangulamento)"}
   
 ];
-  
 
-export default fights.map(fight => ({
+const collection = fights.map(fight => ({
   ...fight,
   type: 'fight',
 }));
+
+export default collection;
