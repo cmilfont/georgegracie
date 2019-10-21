@@ -11,6 +11,10 @@ const config = {
   measurementId:  process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 const firebaseApp = firebase.initializeApp(config);
-firebaseApp.auth().useDeviceLanguage();
 
-export default firebaseApp;
+const db = firebaseApp.firestore();
+const auth = firebaseApp.auth();
+
+auth.useDeviceLanguage();
+
+export default { db, auth };

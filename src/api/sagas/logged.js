@@ -6,8 +6,7 @@ import reducer from '../reducers/crud';
 
 function createSocketChannel(firebase) {
   return eventChannel((emit) => {
-    return firebase.auth()
-                   .onAuthStateChanged(user => emit(user || {}));
+    return firebase.auth.onAuthStateChanged(user => emit(user || {}));
   });
 }
 

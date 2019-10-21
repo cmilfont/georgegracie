@@ -1,18 +1,18 @@
-import firebase from 'firebase';
+import { auth } from '@firebase/app';
 import { put, takeLatest } from 'redux-saga/effects';
 import { push } from 'connected-react-router';
 import actions from '../actions';
 
 function* loginUser(firebaseApp) {
   try {
-    const authProvider = new firebase.auth.GoogleAuthProvider();
+    const authProvider = new auth.GoogleAuthProvider();
     authProvider.addScope('profile');
     authProvider.addScope('email');
     authProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
-    const { user: payload } = yield firebaseApp.auth().signInWithPopup(authProvider);
+    const { user: payload } = yield firebaseApp.auth.signInWithPopup(authProvider);
     const { displayName, photoURL, email, uid } = payload;
-    const ref = yield firebaseApp.firestore().collection("users").doc(uid);
+    const ref = yield firebaseApp.db.collection("users").doc(uid);
     yield ref.set({ displayName, photoURL, email });
 
     yield put(push('/'));

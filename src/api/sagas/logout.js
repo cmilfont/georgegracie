@@ -3,7 +3,7 @@ import { push } from 'connected-react-router';
 import actions from '../actions';
 
 function* prepareLogout(firebase) {
-  yield firebase.auth().signOut();
+  yield firebase.auth.signOut();
   yield put(push('/login'));
 }
 
