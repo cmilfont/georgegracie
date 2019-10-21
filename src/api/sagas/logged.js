@@ -24,7 +24,7 @@ function* watchLogged(firebase) {
         payload,
       });
     } else {
-      yield put(push('/login'));
+      yield put(push('/'));
     }
   }
 }

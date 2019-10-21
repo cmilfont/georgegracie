@@ -7,7 +7,7 @@ import './home.css';
 
 const useStyles = makeStyles(theme => ({
   root:{
-    marginTop: '100px',
+    paddingTop: '20px',
   },
   videoContainer: {
     position: 'relative',
@@ -18,11 +18,14 @@ const useStyles = makeStyles(theme => ({
   },
   video: {
     position: 'absolute',
+    margin: 'auto',
     top: 0,
     left: 0,
+    right: 0,
     width: '100%',
     height: '100%',
-    minWidth: 800,
+    maxWidth: 900,
+    maxHeight: 600,
     //[theme.breakpoints.down('sm')]: {
       ///minWidth: 330,
       //maxWidth: 330,

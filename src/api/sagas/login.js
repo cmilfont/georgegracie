@@ -1,11 +1,11 @@
-import { auth } from '@firebase/app';
+import firebase from 'firebase';
 import { put, takeLatest } from 'redux-saga/effects';
 import { push } from 'connected-react-router';
 import actions from '../actions';
 
 function* loginUser(firebaseApp) {
   try {
-    const authProvider = new auth.GoogleAuthProvider();
+    const authProvider = new firebase.auth.GoogleAuthProvider();
     authProvider.addScope('profile');
     authProvider.addScope('email');
     authProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');

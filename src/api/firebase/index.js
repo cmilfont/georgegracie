@@ -15,6 +15,9 @@ const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 
+window.db = db;
+window.auth = auth;
+
 auth.useDeviceLanguage();
 
 export default { db, auth };
