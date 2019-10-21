@@ -8,7 +8,7 @@ function* prepareFetchEntities(firebase, action) {
   const { location: { pathname } } = action.payload;
   
   if(pathname === '/lutador') {
-    const fights = yield firebase.db.collection("fights").get();
+    const fights = yield firebase.db.collection('fights').orderBy('order', 'asc').get();
     const payload = fights.docs.map(fight => fight.data());
     yield put({
       type: actions.FETCH_ENTITY_SUCCESSFUL,

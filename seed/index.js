@@ -10,7 +10,9 @@ const db = admin.firestore();
 const collection = db.collection('fights');
 const message = 'Added document with ID: ';
 const callback = ref => console.log(message, ref.id);
-const create = fight => collection.add(fight).then(callback);
+
+const create = (fight, index) => collection.add({...fight, order: index + 1}).then(callback);
+//const create = (item, index) => console.log(index, {...item, order: index + 1});
 
 data.forEach(create);
 
