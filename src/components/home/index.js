@@ -1,4 +1,5 @@
 import React from 'react';
+import {  useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -37,13 +38,14 @@ const useStyles = makeStyles(theme => ({
 export default withRouter(() => {
   
   const classes = useStyles();
+  const user = useSelector(state => state.user);
 
   return (
     <Container maxWidth="xl" className={classes.root}>
       <Typography component="div" variant="body1" align="center">
         <div className="channel">
           <div className="calling">
-            <span className="ola">Olá</span>, acompanhe e <a href="https://www.youtube.com/channel/UCArMDJUzbpLOmqryBPVAg5Q/videos">siga o canal</a>
+            <span className="ola">Olá {user.email}</span>, acompanhe e <a href="https://www.youtube.com/channel/UCArMDJUzbpLOmqryBPVAg5Q/videos">siga o canal</a>
           </div>
           <div className="name">GEORGE GRACIE</div>
         </div>

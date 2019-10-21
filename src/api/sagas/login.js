@@ -8,7 +8,7 @@ function* loginUser(firebaseApp) {
     const authProvider = new firebase.auth.GoogleAuthProvider();
     authProvider.addScope('profile');
     authProvider.addScope('email');
-    authProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    //authProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
     const { user: payload } = yield firebaseApp.auth.signInWithPopup(authProvider);
     const { displayName, photoURL, email, uid } = payload;

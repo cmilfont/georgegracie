@@ -1,14 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
-
 import Avatar from '@material-ui/core/Avatar';
-
 import { Link as RouterLink } from 'react-router-dom';
+
+import Logged from './logged';
 
 const Link1 = React.forwardRef((props, ref) => <RouterLink innerRef={ref} {...props} />);
 
@@ -20,8 +20,8 @@ const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
   },
-  title: {
-    
+  separator: {
+    flexGrow: 1,
   },
   link: {
     flexGrow: 1,
@@ -39,6 +39,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
+  const user = useSelector(state => state.user);
+
+const menu = user.email ? 
+  [
+    <div className={classes.separator} />,
+    <Logged user={user} />
+  ]: 
+    <Button color="primary" variant="contained" component={Link1} to="/login">Login</Button>;
 
   return (
     <AppBar className={classes.appBar} position="fixed">
@@ -60,7 +68,7 @@ export default function ButtonAppBar() {
             Mestre
           </Badge>
         </Button>
-        <Button color="primary" variant="contained" component={Link1} to="/login">Login</Button>
+        {menu}
       </Toolbar>
     </AppBar>
   );

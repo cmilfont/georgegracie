@@ -7,6 +7,7 @@ export default history => {
   const fn = connectRouter(history);
 
   const initialState = { 
+    user: {},
     fights: [], 
     router: connectRouter(history)
   };
