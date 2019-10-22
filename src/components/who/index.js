@@ -27,7 +27,8 @@ const Who = function() {
       <h1>Quem foi George Gracie?</h1>
       <p>
         Falar do George em poucas palavras é complexo dado sua longa história com a luta no Brasil,
-        duas décadas como lutador e mais três como mestre não podem ser resumidas, deixamos essa matéria
+        duas décadas como lutador, sendo campeão de <a href="https://catchbrazil.com.br/historia/">Catch Wrestling</a>,
+        Jiujitsu e Vale-tudo, e mais três décadas como mestre , deixamos essa matéria
         do jornal Última Hora do RJ, de 16/11/1955 que já naquela época tentava demonstrar a importância
         desse grande pioneiro e co-criador de todo o cenário de combate que foi desenvolvido aqui:
       </p>
