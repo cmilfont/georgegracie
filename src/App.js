@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createBrowserHistory } from 'history';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { applyMiddleware, compose, createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
@@ -14,6 +14,7 @@ import Timeline from './components/timeline';
 import Home from './components/home';
 import Toolbar from './components/toolbar';
 import Login from './components/login';
+import Who from './components/who';
 import './App.css';
 
 import createReducer from './api/reducer';
@@ -55,6 +56,7 @@ function App() {
               <Route exact path="/" render={Home} />
               <Route exact path="/lutador" render={Timeline} />
               <Route exact path="/login" render={Login} />
+              <Route exact path="/quemfoi" render={Who} />
               <Route render={() => (<div>Miss</div>)} />
             </Switch>
               

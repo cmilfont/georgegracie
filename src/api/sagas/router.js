@@ -1,6 +1,5 @@
 import { takeLatest, put } from 'redux-saga/effects';
 import { LOCATION_CHANGE } from 'connected-react-router';
-import { push } from 'connected-react-router';
 import actions from '../actions';
 import reducer from '../reducers/crud';
 

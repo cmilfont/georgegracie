@@ -43,8 +43,8 @@ export default function ButtonAppBar() {
 
 const menu = user.email ? 
   [
-    <div className={classes.separator} />,
-    <Logged user={user} />
+    <div key="separator" className={classes.separator} />,
+    <Logged key="logged" user={user} />
   ]: 
     <Button color="primary" variant="contained" component={Link1} to="/login">Login</Button>;
 
@@ -54,6 +54,7 @@ const menu = user.email ?
         <Link1 className={classes.link} to="/">
           <Avatar alt="George Gracie Logo" src="images/icons/icon-72x72.png" />
         </Link1>
+        <Button size="small" className={classes.button} color="inherit" component={Link1} to="/quemfoi">Sobre</Button>
         <Button size="small" className={classes.button} color="inherit" component={Link1} to="/lutador">Lutador</Button>
         <Button size="small" className={classes.button} color="inherit" component={Link1} disabled to="/mestre">
           <Badge
