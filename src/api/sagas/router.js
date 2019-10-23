@@ -5,7 +5,7 @@ import reducer from '../reducers/crud';
 
 function* prepareFetchEntities(firebase, action) {
   const { location: { pathname } } = action.payload;
-  
+
   if(pathname === '/lutador') {
     const fights = yield firebase.db.collection('fights').orderBy('order', 'asc').get();
     const payload = fights.docs.map(fight => fight.data());

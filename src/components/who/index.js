@@ -34,7 +34,7 @@ const Who = function() {
       </p>
       <div className={classes.materia}>
         <div className={classes.photo}>
-          <img src="images/declaracao-cortada.png" />
+          <img alt="Jornal Última Hora 16/11/1955" src="images/declaracao-cortada.png" />
         </div>
         <div className={classes.texto}>
           <h3>ARQUIVOS IMPAGAVEIS</h3>

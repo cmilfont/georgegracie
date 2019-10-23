@@ -18,7 +18,11 @@ function* loginUser(firebaseApp) {
     yield put(push('/'));
   } catch (err) {
     console.log(err);
-    yield put({ type: actions.LOGIN_USER_FAILED, payload: err });
+    yield put({
+      type: actions.LOGIN_USER_FAILED,
+      payload: err,
+      ga: { category: 'ERROR', action: actions.LOGIN_USER } 
+    });
   }
 }
 
