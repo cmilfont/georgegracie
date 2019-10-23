@@ -15,7 +15,20 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "headers": [ {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [ {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        } ]
+      }, {
+        "source": "**/*.@(jpg|jpeg|gif|png|js|css)",
+        "headers": [ {
+          "key": "Cache-Control",
+          "value": "max-age=31557600"
+        } ]
+      }]
   },
   "storage": {
     "rules": "storage.rules"
