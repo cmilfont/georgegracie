@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
+import Hidden from '@material-ui/core/Hidden';
 import { Link as RouterLink } from 'react-router-dom';
 
 import Logged from './logged';
@@ -46,7 +47,12 @@ export default function ButtonAppBar() {
 
   const menu = user.email ? 
     <Logged key="logged" user={user} /> :
-    <Button className={classes.login} color="primary" variant="contained" component={Link1} to="/login">Login</Button>;
+    [
+      <Hidden smDown>
+        Inscreva-se no site para receber atualizações &#8614;&nbsp;&nbsp; 
+      </Hidden>,
+      <Button className={classes.login} color="primary" variant="contained" component={Link1} to="/login">Login</Button>
+    ];
 
   return (
     <AppBar className={classes.appBar} position="fixed">

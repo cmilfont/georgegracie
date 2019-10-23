@@ -26,9 +26,7 @@ export default function MenuAppBar({ user }) {
 
   return (
     <div>
-      <Hidden smDown>
-        {user.email}
-      </Hidden>
+      <Hidden smDown>{user.email}</Hidden>
       <IconButton
         aria-label="account of current user"
         aria-controls="menu-appbar"

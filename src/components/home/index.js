@@ -27,11 +27,6 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     maxWidth: 900,
     maxHeight: 600,
-    //[theme.breakpoints.down('sm')]: {
-      ///minWidth: 330,
-      //maxWidth: 330,
-      //maxHeight: 300,
-    //},
   },
 }));
 
@@ -55,7 +50,7 @@ export default withRouter(() => {
             className={classes.video}
             width="853"
             height="480"
-            src="https://www.youtube.com/embed/z4KvnFtZkoQ"
+            src="https://www.youtube.com/embed/H0T6uWkHMgM"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen />
