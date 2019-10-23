@@ -10,9 +10,10 @@ const config = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId:  process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
-const firebaseApp = firebase.initializeApp(config);
 
+const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
+db.enablePersistence();
 const auth = firebaseApp.auth();
 
 window.db = db;
