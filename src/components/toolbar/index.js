@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
   },
   breve: {
     fontSize: '7px',
+  },
+  login: {
+    color: '#4C566A',
   }
 }));
 
@@ -41,12 +44,9 @@ export default function ButtonAppBar() {
   const classes = useStyles();
   const user = useSelector(state => state.user);
 
-const menu = user.email ? 
-  [
-    <div key="separator" className={classes.separator} />,
-    <Logged key="logged" user={user} />
-  ]: 
-    <Button color="primary" variant="contained" component={Link1} to="/login">Login</Button>;
+  const menu = user.email ? 
+    <Logged key="logged" user={user} /> :
+    <Button className={classes.login} color="primary" variant="contained" component={Link1} to="/login">Login</Button>;
 
   return (
     <AppBar className={classes.appBar} position="fixed">
@@ -69,6 +69,7 @@ const menu = user.email ?
             Mestre
           </Badge>
         </Button>
+        <div key="separator" className={classes.separator} />
         {menu}
       </Toolbar>
     </AppBar>
