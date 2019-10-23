@@ -5,7 +5,8 @@ const eventNames = firebase.analytics.EventName;
 
 function* prepareAnalytics(firebaseApp, action) {
   const defaultAnalytics = firebase.analytics();
-  const { meta, type, payload: { location } } = action;
+  const { meta, type, payload } = action;
+  const location = payload ? payload.location : null;
   const { email } = yield select(state => state.user);
   
   if (location && location.pathname) {
