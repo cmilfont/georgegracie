@@ -2,7 +2,7 @@
 
 George Gracie foi o primeiro campeão da família, o primeiro atleta a valorizar o Cross Training, foi campeão de [Catch Wrestling](https://catchbrazil.com.br/historia/) e Jiujitsu durante duas décadas, depois mestre de grandes campões pelo Brasil inteiro. 
 
-Pesquiso sobre a vida dele um pouco mais de 10 anos, em vez de escrever um livro eu pretendo criar um canal de Screencasts e catalogar sua vida nesse site [https://georgegracie.com.br/](https://georgegracie.com.br/).
+Pesquiso sobre a vida dele um [pouco mais de 10 anos](https://www.facebook.com/gatoruivo), em vez de escrever um livro eu pretendo criar um canal de Screencasts e catalogar sua vida nesse site [https://georgegracie.com.br/](https://georgegracie.com.br/).
 
 ## Propósito
 
