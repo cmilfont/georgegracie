@@ -3,7 +3,7 @@
   "short_name": "George Gracie",
   "theme_color": "#81a1c1",
   "background_color": "#eceff4",
-  "display": "fullscreen",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/?utm_campaign=PWA",
   "icons": [
