@@ -14,6 +14,20 @@ Deixo minhas recomendações de como usar o Redux com o Saga e explorar com conv
 
 Contribuições são bem vindas.
 
+## Arquivos não comitados
+
+.env com chaves:  
+REACT_APP_FIREBASE_API_KEY=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_AUTH_DOMAIN=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_DATABASE_URL=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_PROJECt_ID=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_STORAGE_BUCKET=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_SENDER_ID=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_APP_ID=[DO-SEU-FIREBASE]  
+REACT_APP_FIREBASE_MEASUREMENT_ID=[DO-SEU-FIREBASE]  
+
+Arquivo georgegracie-com-firebase-adminsdk-7zsvw-3c4129ce73.json exportado do firebase para execução do seed no console
+
 ## Licença
 
 [Apache License 2.0](https://github.com/cmilfont/georgegracie/blob/master/LICENSE)
